@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages {
+        stage ('Checkout') {
+            steps {
+                git branch: 'master',
+                    url: 'https://github.com/Aamir377300/abcnew.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                script {
+                    println 'Hello World'
+                }
+            }
+        }
+    }
+}
